@@ -31,7 +31,7 @@
     </nav>
     </template> 
 
-    <style>
+    <style scoped>
     nav {
         background-color: #582707;
 
