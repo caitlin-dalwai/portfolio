@@ -3,7 +3,7 @@
        
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     
-  <div class="carousel-inner  justify-content-center align-items-center">
+  <div class="carousel-inner justify-content-center align-items-center">
     <div v-for= "testimonial in getTestiInfo()" :key="testimonial">
     <div class="carousel-item active">
       <div class="card" style="width: 18rem;" id="testis">
