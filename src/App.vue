@@ -1,11 +1,16 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/projects">Projects</router-link>
-  </nav>
+  <NavComp/>
+
   <router-view/>
 </template>
+<script>
+import NavComp from "./components/NavComp";
+export default {
+  components:{
+    NavComp
+  }
+}
+</script>
 
 <style>
 #app {
@@ -28,4 +33,5 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
