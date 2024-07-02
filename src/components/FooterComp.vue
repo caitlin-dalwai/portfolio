@@ -26,6 +26,7 @@ export default {
         border-top: 5px solid #582707;
         border-bottom: 5px solid #582707;
         height: 70px;
+        background-color: #EAEFBD;
     }
     #btm{
         margin-top:1.3%;
