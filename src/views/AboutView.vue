@@ -29,8 +29,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <img style="border: #582707 20px solid; border-radius: 200%;" id="imgA" :src="getAboutImg()" alt="About Image">
+        <div class="col-md-4" >
+          <div class="myTest">
+            <img id="imgA" :src="getAboutImg()" alt="About Image">
+          </div>
+          
         </div>
 
         <div class="col-md-4">
@@ -204,7 +207,15 @@ img {
   height: 450px;
   object-fit: cover;
   border-radius: 200%;
+  
+  filter: grayscale(100%);
+  
+}
+.myTest{
+  background-color: #582707;
+  border-radius: 200%;
   border: #582707 20px solid;
+  /* width: 100%; */
 }
 
 
