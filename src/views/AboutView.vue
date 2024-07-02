@@ -18,7 +18,7 @@
 </div>
   <div>
 
-    <h1 style="font-weight:bolder; color:black; margin-top:1%">Who is Caitlin?</h1>
+    <h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;">Who is Caitlin?</h1>
     
     <div class="container-fluid">
       <div class="row justify-content-center">
@@ -91,10 +91,10 @@
                             </div>
                         </div>
                         <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" style="border:10px solid #697A21;background-color: white;">
+                        data-bs-target="#exampleModal1" style="border:10px solid #697A21;background-color: white;">
                         Work Experience
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
