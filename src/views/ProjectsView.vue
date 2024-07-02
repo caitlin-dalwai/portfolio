@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;">Projects</h1>
         <section class="d-flex justify-content-evenly flex-wrap">
             <div class="hehe" v-for="project in getProjInfo()" :key="project" id="cen">
                 <!-- <h1>{{project.name}}</h1>

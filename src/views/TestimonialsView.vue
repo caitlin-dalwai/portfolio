@@ -16,12 +16,12 @@
                     <div class="d-flex">
                     
                     <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" style="border:5px solid #697A21">
+                        :data-bs-target="`#exampleModal${index}`" style="border:5px solid #697A21">
                         Message
                     </button>
 
                     
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" :id="`exampleModal${index}`" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
