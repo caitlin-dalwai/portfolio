@@ -23,7 +23,8 @@ export default {
 <style>
 
     #foot{
-        border: 5px solid #582707;
+        border-top: 5px solid #582707;
+        border-bottom: 5px solid #582707;
         height: 70px;
     }
     #btm{

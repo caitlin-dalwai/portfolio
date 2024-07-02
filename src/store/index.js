@@ -39,16 +39,16 @@ export default createStore({
       console.log(data);
       try {
         commit('settestimonials', testimonials)
+        commit('setaboutMe', aboutMe)
+        commit('setaboutImg', aboutImg)
+        commit('seteducation', education)
+        commit('setworkExp', workExp)
+        commit('setprojects', projects)
       } catch (error) {
         console.error('Error', error)
         alert("Could not locate data")
       }
-      commit('setaboutMe', aboutMe)
-      commit('setaboutImg', aboutImg)
-      commit('seteducation', education)
-      commit('setworkExp', workExp)
-      // commit('settestimonials', testimonials)
-      commit('setprojects', projects)
+     
 
     }
   },

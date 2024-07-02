@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+body{
+  background-color:#EAEFBD;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,6 +38,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+*{
+  font-family: "Arsenal SC", sans-serif;
 }
 
 </style>

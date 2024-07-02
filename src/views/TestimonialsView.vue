@@ -4,8 +4,8 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     
   <div class="carousel-inner justify-content-center align-items-center">
-    <div v-for= "testimonial in getTestiInfo()" :key="testimonial">
-    <div class="carousel-item active">
+    <div v-for= "(testimonial,index) in getTestiInfo()" :key="testimonial.name">
+    <div class="carousel-item" :class="{'active':index==0}">
       <div class="card" style="width: 18rem;" id="testis">
                 <img :src="testimonial.image" class="card-img-top" alt="img" style="border-radius:50%">
                 <div class="card-body">
