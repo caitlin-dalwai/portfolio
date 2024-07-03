@@ -211,6 +211,9 @@ img {
   filter: grayscale(100%);
   
 }
+.myTest img:hover {
+  filter: none;
+}
 .myTest{
   background-color: #582707;
   border-radius: 200%;
