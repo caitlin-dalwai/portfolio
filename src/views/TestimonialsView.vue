@@ -1,6 +1,6 @@
 <template>
     <div>
-       
+        <h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;">Testimonials</h1>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     
   <div class="carousel-inner justify-content-center align-items-center">
@@ -15,8 +15,8 @@
                     
                     <div class="d-flex">
                     
-                    <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
-                        :data-bs-target="`#exampleModal${index}`" style="border:5px solid #697A21">
+                    <button type="button" class="btn btn-success"  id="modalBtn" data-bs-toggle="modal"
+                        :data-bs-target="`#exampleModal${index}`" style="color:">
                         Message
                     </button>
 
@@ -49,11 +49,11 @@
     </div>
     
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style="background-color:#697A21;">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="background-color:#697A21;">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
