@@ -9,21 +9,21 @@
             <h5 style="color:black">Pop me a message</h5>
             <div class="row">
                 <div class="col-lg-6">
-                    <form action="https://formspree.io/f/myyrldon" method="POST">
+                    <form id="myForm" action="https://formspree.io/f/myyrldon" method="POST" novalidate>>
                         <div class="p-3 m-5 border-5 bd-example m-5 mt-0 border-5">
                             <div class="mb-3" style="width: 50%;">
                                 <label for="name" class="form-label" id="fCon">Name</label>
-                                <input type="text" class="form-control" id="name" name="name">
+                                <input type="text" id="name" name="name">
                             </div>
                             <div class="mb-3" style="width: 50%;">
-                                <label for="email" class="form-label" id="fCon">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                                <label for="email" class="form-label" id="fCon1">Email address</label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com">
                             </div>
                             <div class="mb-3" style="width: 50%;">
-                                <label for="feedback" class="form-label" id="fCon">Type your feedback here</label>
-                                <textarea class="form-control" id="feedback" name="feedback" rows="3"></textarea>
+                                <label for="feedback" class="form-label" id="fCon2">Type your feedback here</label>
+                                <textarea id="feedback" name="feedback" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-outline-success">Submit</button>
+                            <button type="submit" class="btn btn-outline-success" @click='formVal' >Submit</button>
                             <button type="reset" class="btn">Clear</button>
                         </div>
                     </form>
@@ -107,7 +107,44 @@
       easeOutQuad(t, b, c, d) {
         t /= d;
         return -c * t * (t - 2) + b;
-      }
+      },
+    //   formVal(){
+    //     let names= document.getElementById('name').value
+    //     let emails= document.getElementById('email').value
+    //     let feed= document.getElementById('feedback').value
+    //     if (names.includes['0','1','2','3','4','5','6','7','8','9']) {
+    //         alert('Please enter a valid name')
+    //     }else if (!emails.includes['@', '.com']) {
+    //         alert('Please enter valid email')
+    //     }else if (feed.length<1) {
+    //         alert('Please provide feedback')
+    //     }
+    //   }
+    formVal(event) {
+            event.preventDefault(); // prevent the form from submitting
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let feedback = document.getElementById('feedback').value;
+
+            if (!/^[a-zA-Z ]+$/.test(name)) {
+                alert('Please enter a valid name');
+                
+            }
+
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert('Please enter a valid email');
+                
+            }
+
+            if (feedback.length < 1) {
+                alert('Please provide feedback');
+                
+            }
+
+            // if all validations pass, submit the form
+            document.getElementById('myForm').submit();
+        }
+    
     }
   };
   </script>
