@@ -5,7 +5,7 @@
             <div class="hehe" v-for="project in getProjInfo()" :key="project" id="cen">
                 <!-- <h1>{{project.name}}</h1>
             <img :src="project.image"> -->
-                <div class="card" style="width: 300px; height: 150px; background-color: #697A21;" id="spP">
+                <div class="card" style="width: 300px; height: 150px; background-color: #582707;" id="spP">
                     <div class="container">
                         <img :src="project.image" class="card-img" alt="project img" style="margin-top: 2%;">
 
@@ -48,7 +48,7 @@ body{
 }
 #text {
     display: none;
-    background-color: #6a7a21cf;
+    background-color: #582707de;
     transition: 5s;
     height: fit-content;
 
