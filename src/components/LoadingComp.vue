@@ -1,23 +1,9 @@
-<!-- <template>
-    <div>
-       <h1>Hello</h1> 
-    </div>
-</template>
-<script>
-export default {
-    
-}
-</script>
-<style>
-    body{
-        background-color: red;
-    }
-</style> -->
-
 <template>
     <div class="loading">
-      <h1>Loading...</h1>
-      <!-- You can add additional loading indicators or animations here -->
+      <div class="shake animated fast delay-2s">
+<img class="tree animated delay-1s fadeInUp faster" src="http://www.clker.com/cliparts/Z/Q/1/5/y/e/green-tree-md.png" alt="Green Tree that animates into the page and then shakes">
+<h1>Loading...</h1>
+</div>
     </div>
   </template>
   
@@ -44,5 +30,14 @@ export default {
     font-size: 24px;
     color: #333;
   }
+  body{
+  background-color:#582707;
+ 
+}
+
+img{
+  width:100px;
+}
+  
   </style>
   

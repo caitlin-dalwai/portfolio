@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 export default createStore({
   state: {
     aboutMe:null,
@@ -34,10 +35,10 @@ export default createStore({
   },
   actions: {
     async getMyInfo({commit}){
+      try {
       let {data}= await axios.get('https://caitlin-dalwai.github.io/api-portfolio/data/index.json')
       let {aboutMe, aboutImg, education, workExp, testimonials, projects} = data
       console.log(data);
-      try {
         commit('settestimonials', testimonials)
         commit('setaboutMe', aboutMe)
         commit('setaboutImg', aboutImg)
@@ -46,7 +47,13 @@ export default createStore({
         commit('setprojects', projects)
       } catch (error) {
         console.error('Error', error)
-        alert("Could not locate data")
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Could not fetch data',
+          timer:1500,
+          showConfirmButton:false
+        })
       }
      
 

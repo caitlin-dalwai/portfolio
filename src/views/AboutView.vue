@@ -167,14 +167,6 @@ export default {
     return this.$store.state.education
   }
 
-  },
-  computed:{
-    getMyInfo(){
-      return this.$store.dispatch('getMyInfo')
-    }
-  },
-  mounted(){
-    this.getMyInfo
   }
 }
 </script>

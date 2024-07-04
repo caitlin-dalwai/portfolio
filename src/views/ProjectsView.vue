@@ -31,14 +31,6 @@ export default {
         getProjInfo() {
             return this.$store.state.projects
         }
-    },
-    computed: {
-        getMyInfo() {
-            return this.$store.dispatch('getMyInfo')
-        }
-    },
-    mounted() {
-        this.getMyInfo
     }
 }
 </script>

@@ -13,6 +13,7 @@
                         <div class="p-3 m-5 border-5 bd-example m-5 mt-0 border-5">
                             <div class="mb-3" style="width: 50%;">
                                 <label for="name" class="form-label" id="fCon">Name</label>
+                                <br>
                                 <input type="text" id="name" name="name">
                             </div>
                             <div class="mb-3" style="width: 50%;">

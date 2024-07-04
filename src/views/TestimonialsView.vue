@@ -70,14 +70,6 @@ export default {
         getTestiInfo(){
             return this.$store.state.testimonials
         }
-    },
-    computed:{
-        getMyInfo(){
-            return this.$store.dispatch('getMyInfo')
-        }
-    },
-    mounted(){
-        this.getMyInfo
     }
 }
 </script>
