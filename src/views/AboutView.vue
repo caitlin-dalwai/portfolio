@@ -31,7 +31,7 @@
         </div>
         <div class="col-md-4" >
           <div class="myTest">
-            <img id="imgA" :src="getAboutImg()" alt="About Image">
+            <img id="imgA" :src="getAboutImg()" alt="About Image" >
           </div>
           
         </div>
@@ -359,5 +359,63 @@ img {
             rotate(0deg);
         opacity: 0;
     }
+}
+@media (max-width: 300px) {
+  .container-fluid {
+    padding: 10px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .col-md-4 {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .card {
+    height: auto;
+    margin-top: 0;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .myTest {
+    background-color: #582707;
+    border-radius: 200%;
+    border: #582707 20px solid;
+    padding: 10px;
+    margin-top: 110%;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 14px;
+    margin-top: 1%;
+  }
+  button {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: 1%;
+  }
+  .modal-dialog {
+    max-width: 90%;
+  }
+  .modal-content {
+    padding: 10px;
+  }
+  .modal-header {
+    padding: 10px;
+  }
+  .modal-body {
+    padding: 10px;
+  }
+  .modal-footer {
+    padding: 10px;
+  }
 }
 </style>
