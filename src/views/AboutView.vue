@@ -37,7 +37,7 @@
         </div>
 
         <div class="col-md-4">
-          <div style="margin-top:80%;">
+          <div id="respModal" style="margin-top:80%;">
             <h5 style="color: black;">Click on these for more info!</h5>
             <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal" style="border:10px solid #697A21; margin-right: 1%; background-color: white;">
@@ -416,6 +416,9 @@ img {
   }
   .modal-footer {
     padding: 10px;
+  }
+  #respModal{
+    margin-top: 0px !important; 
   }
 }
 </style>
