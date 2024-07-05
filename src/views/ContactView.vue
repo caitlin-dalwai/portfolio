@@ -177,5 +177,49 @@ canvas {
   height: 100vh;
   z-index: -1; 
 }
+@media only screen and (max-width: 300px) {
+    /* Adjust layout for small screen */
+    .container {
+      padding: 10px;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .col-lg-6 {
+      width: 100%;
+    }
+    .background-canvas {
+      display: none !important;
+    }
+    h1 {
+      font-size: 18px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    form {
+      padding: 10px;
+    }
+    .mb-3 {
+      width: 100%;
+    }
+    label {
+      font-size: 12px;
+      width: 100%;
+    }
+    input, textarea {
+      font-size: 10px;
+    }
+    button {
+      font-size: 12px;
+    }
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
   </style>
   

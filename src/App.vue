@@ -2,6 +2,10 @@
   <div id="app">
     <NavComp/>
     <router-view/>
+    <br>
+    <br>
+    <br>
+    <br>
     <FooterComp/>
     <LoadingComp v-if="!$store.state.aboutMe" />
   </div>

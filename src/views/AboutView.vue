@@ -210,7 +210,6 @@ img {
   background-color: #582707;
   border-radius: 200%;
   border: #582707 20px solid;
-  /* width: 100%; */
 }
 
 
