@@ -9,20 +9,20 @@
             <h5 style="color:black">Pop me a message</h5>
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="myForm" action="https://formspree.io/f/myyrldon" method="POST" novalidate>>
+                    <form id="myForm" action="https://submit-form.com/FBtdQasKq" method="POST" novalidate>
                         <div class="p-3 m-5 border-5 bd-example m-5 mt-0 border-5">
                             <div class="mb-3" style="width: 50%;">
                                 <label for="name" class="form-label" id="fCon">Name</label>
                                 <br>
-                                <input type="text" id="name" name="name">
+                                <input type="text" id="name" name="name" required="`${formVal()}`">
                             </div>
                             <div class="mb-3" style="width: 50%;">
                                 <label for="email" class="form-label" id="fCon1">Email address</label>
-                                <input type="email" id="email" name="email" placeholder="name@example.com">
+                                <input type="email" id="email" name="email" placeholder="name@example.com" required="`${formVal()}`">
                             </div>
                             <div class="mb-3" style="width: 50%;">
                                 <label for="feedback" class="form-label" id="fCon2">Type your feedback here</label>
-                                <textarea id="feedback" name="feedback" rows="3"></textarea>
+                                <textarea id="feedback" name="feedback" rows="3" required="`${formVal()}`"></textarea>
                             </div>
                             <button type="submit" class="btn btn-outline-success" @click='formVal' >Submit</button>
                             <button type="reset" class="btn">Clear</button>
@@ -109,40 +109,28 @@
         t /= d;
         return -c * t * (t - 2) + b;
       },
-    //   formVal(){
-    //     let names= document.getElementById('name').value
-    //     let emails= document.getElementById('email').value
-    //     let feed= document.getElementById('feedback').value
-    //     if (names.includes['0','1','2','3','4','5','6','7','8','9']) {
-    //         alert('Please enter a valid name')
-    //     }else if (!emails.includes['@', '.com']) {
-    //         alert('Please enter valid email')
-    //     }else if (feed.length<1) {
-    //         alert('Please provide feedback')
-    //     }
-    //   }
+  
     formVal(event) {
-            event.preventDefault(); // prevent the form from submitting
+            event.preventDefault(); 
             let name = document.getElementById('name').value;
             let email = document.getElementById('email').value;
             let feedback = document.getElementById('feedback').value;
 
             if (!/^[a-zA-Z ]+$/.test(name)) {
                 alert('Please enter a valid name');
-                
+                return false;
             }
 
             if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
                 alert('Please enter a valid email');
-                
+                return false;
             }
 
             if (feedback.length < 1) {
                 alert('Please provide feedback');
-                
+                return false;
             }
 
-            // if all validations pass, submit the form
             document.getElementById('myForm').submit();
         }
     
