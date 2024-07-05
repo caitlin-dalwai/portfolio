@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div id="footResp">
   <h1 class="animate__animated animate__slideInDown" id="headH" style="font-weight:bolder; color:black;">CAITLIN DALWAI</h1>
   <h3 class="animate__animated animate__slideInLeft" style="color:black;">Aspiring full-stack developer</h3>
-    <div class="growing"><router-link class="animate__animated animate__rollIn text-success" to='projects' >Checkout my Growth</router-link></div><div class="growing1"></div>
+    <div class="growing"><router-link class="animate__animated animate__rollIn text-success" to='projects'  >Checkout my Growth</router-link></div><div class="growing1"></div>
+    <router-link class="animate__animated animate__rollIn text-success" to='projects' id="linkP" style="display: none;">Checkout my Growth</router-link>
 
   </div>
   
@@ -150,5 +151,26 @@ export default {
   76.66% {inset: -100vh 49px 42px 54px;opacity:1}
   86.66%,
   100%{inset: -100vh 49px 42px 54px;opacity:0}
+}
+@media only screen and (max-width: 300px) {
+  h1 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  body {
+    grid-template-columns: 1fr;
+  }
+  #headH {
+    margin-top: 50%;
+  }
+  .growing, .growing1 {
+    display: none !important;
+  }
+  #linkP{
+    display: contents !important;
+  }
+  
 }
 </style>

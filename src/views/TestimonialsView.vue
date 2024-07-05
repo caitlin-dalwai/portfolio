@@ -82,4 +82,41 @@ export default {
     body{
     background-color: #EAEFBD;
 }
+@media (max-width: 300px) {
+        #testis {
+            margin-left: 1%;
+            margin-top: 5%;
+            width: 80%;
+        }
+        .card {
+            width: 100%;
+        }
+        .card-img-top {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        .modal-dialog {
+            width: 90%;
+            margin: 10px auto;
+        }
+        .modal-content {
+            padding: 10px;
+        }
+        .modal-header {
+            padding: 10px;
+        }
+        .modal-body {
+            padding: 10px;
+        }
+        .modal-footer {
+            padding: 10px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 20px;
+            height: 20px;
+        }
+    }
 </style>
