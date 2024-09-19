@@ -10,6 +10,7 @@ export default createStore({
     testimonials:null,
     projects:null,
     skills:null,
+    softSkills:null
 
   },
   getters: {
@@ -35,13 +36,16 @@ export default createStore({
     },
     setskills(state, payload){
       state.skills = payload
+    },
+    setsoftSkills(state, payload){
+      state.softSkills = payload
     }
   },
   actions: {
     async getMyInfo({commit}){
       try {
       let {data}= await axios.get('https://caitlin-dalwai.github.io/api-portfolio/data/index.json')
-      let {aboutMe, aboutImg, education, workExp, testimonials, projects, skills} = data
+      let {aboutMe, aboutImg, education, workExp, testimonials, projects, skills, softSkills} = data
       console.log(data);
         commit('settestimonials', testimonials)
         commit('setaboutMe', aboutMe)
@@ -50,6 +54,7 @@ export default createStore({
         commit('setworkExp', workExp)
         commit('setprojects', projects)
         commit('setskills', skills)
+        commit('setsoftSkills', softSkills)
       } catch (error) {
         console.error('Error', error)
         Swal.fire({

@@ -15,7 +15,7 @@
                             <p class="card-text" style="color: white;">{{ project.description }}</p>
                             <span id="spBtn"><a :href="project.github" class="btn btn-success" style="color: black;"
                                     target="_blank">GitHub</a> <a :href="project.vercel" class="btn btn-success"
-                                    style="color: black;" target="_blank">Vercel</a></span>
+                                    style="color: black;" target="_blank">Live</a></span>
                         </div>
                     </div>
                 </div>

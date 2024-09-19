@@ -3,7 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
-import TestimonialsView from '../views/TestimonialsView.vue'
 import SkillsView from '../views/SkillsView.vue'
 
 const routes = [
@@ -32,12 +31,7 @@ const routes = [
     name: 'contact',
     component: ContactView
   },
-  {
-    path: '/testimonials',
-    name: 'testimonials',
-    component: TestimonialsView
-  },
-  {
+    {
     path: '/about',
     name: 'about',
     // route level code-splitting
