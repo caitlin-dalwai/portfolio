@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
-import SkillsView from '../views/SkillsView.vue'
+import EduExpView from '../views/EduExpView.vue'
 
 const routes = [
   {
@@ -22,9 +22,9 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/skills',
-    name: 'skills',
-    component: SkillsView
+    path: '/eduexp',
+    name: 'eduexp',
+    component: EduExpView
   },
   {
     path: '/contact',

@@ -1,6 +1,7 @@
 <template>
     <div id="fPage">
         <h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;">Projects</h1>
+        <h5>Hover over image to view more</h5>
         <h5 id="subT" style="display: none; font-size: medium;" class="animate__animated animate__bounceInLeft" >Click on image to see more</h5>
         <section class="d-flex justify-content-evenly flex-wrap">
             <div class="hehe" v-for="project in getProjInfo()" :key="project" id="cen">
@@ -11,7 +12,7 @@
                         <img :src="project.image" class="card-img" alt="project img" style="margin-top: 2%;">
 
                         <div class="card-img-overlay" id="text">
-                            <h5 class="card-title" style="color: black; font-weight: bolder;">{{ project.name }}</h5>
+                            <h5 class="card-title" style="color: white; font-weight: bolder;">{{ project.name }}</h5>
                             <p class="card-text" style="color: white;">{{ project.description }}</p>
                             <span id="spBtn"><a :href="project.github" class="btn btn-success" style="color: black;"
                                     target="_blank">GitHub</a> <a :href="project.vercel" class="btn btn-success"

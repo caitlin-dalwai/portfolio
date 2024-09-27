@@ -14,7 +14,7 @@
           <router-link class="nav-link" :class="{ active: $route.path=== '/about' }" id="col" to="/about">About</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :class="{ active: $route.path=== '/skills' }" id="col" to="/skills">Skills</router-link>
+          <router-link class="nav-link" :class="{ active: $route.path=== '/eduexp' }" id="col" to="/eduexp">Education & Experience</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :class="{ active: $route.path=== '/projects' }" id="col" to="/projects">Projects</router-link>

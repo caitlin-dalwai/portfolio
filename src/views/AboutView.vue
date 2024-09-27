@@ -36,118 +36,42 @@
           
         </div>
 
-        <div class="col-md-4">
-          <div id="respModal" style="margin-top:80%;">
-            <h5 style="color: black;">Click on these for more info!</h5>
-            <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" style="border:10px solid #697A21; margin-right: 1%; background-color: white;">
-                        Education
-                    </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">My education journey thus far</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close" style="border:5px solid #697A21"></button>
-                                </div>
-                                <div class="modal-body">
-                                   
-                                      <div v-for="education in getEdu()" :key="education" >
-                                        <div style="margin-top: 3%; border: #582707 dotted 5px;">
-                                        <div class="card-text">
-                                        <h3>{{ education.qualif }}</h3>
-                                        
-                                        <h5>{{ education.place }}</h5>
-                                        
-                                      {{ education.duraction }}
-                                          <br>
-                                      {{ education.details }}
-                                        
-                                        <h5 style="text-decoration: underline;">Knowledge I've learnt & extra activities I took part in:</h5>
-                                        
-                                         {{ education.subjects }}
-                                        <br>
-                                         {{ education.extra }}
-                                          <br>
-                                         {{ education.acts }}
-                                        <br>
-                                        {{ education.acts2 }}
-                                        <br>
-                                        {{ education.acts3 }}
-                                        <br>
-                                        {{ education.acts4 }}
-                                        </div>
-                                      </div>
-                                        
-                                        
-                                      </div>
-                                    
-                                   
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal" style="border:5px solid #697A21">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal1" style="border:10px solid #697A21;background-color: white;">
-                        Work Experience
-                    </button>
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">My working journey thus far</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close" style="border:5px solid #697A21"></button>
-                                </div>
-                                <div class="modal-body">
-                                   
-                                      <div v-for="workExp in getWorkEx()" :key="workExp" >
-                                        <div style="margin-top: 3%; border: #582707 dotted 5px;">
-                                        <div class="card-text">
-                                        <h3>{{ workExp.placeOfWork }}</h3>
-                                        
-                                        <h5>{{ workExp.description  }}</h5>
-                                        
-                                      {{ workExp.year }}
-                                          <br>
-                                      {{ workExp.details }}
-                                        
-                                        <h5 style="text-decoration: underline;">My Duties:</h5>
-                                        
-                                         {{ workExp.acts }}
-                                        <br>
-                                         {{ workExp.acts2 }}
-                                          <br>
-                                         {{ workExp.acts3 }}
-                                        <br>
-                                        {{ workExp.acts4 }}
-                                        
-                                        </div>
-                                      </div>
-                                        
-                                        
-                                      </div>
-                                    
-                                   
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal" style="border:5px solid #697A21">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-          </div>
-        </div>
+        
+
       </div>
+      <div>
+<h1 style="font-weight:bolder; color:black; text-decoration: underline;">Skills</h1>
+<h5>Aptitudes I've acquired throughout my journey till now</h5>
+
+<section class="d-flex justify-content-evenly flex-wrap">
+            <div class="hehe" v-for="skill in getskillsInfo()" :key="skill" id="cen">
+                <div class="card" style="background-color: #EAEFBD; border: none;  width: 200px; height: fit-content ">
+                    <div class="container">
+                        <img :src="skill.image" class="card-img animate__animated animate__tada" alt="skill img" style="margin-top: 20%;  ">
+                        </div>
+                        </div>
+                        </div>
+</section>
+
+
+    </div>
+    <div>
+<h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;"> Soft Skills</h1>
+<h5>Hover over image to view more</h5>
+
+<section class="d-flex justify-content-evenly flex-wrap">
+            <div class="hehe" v-for="softSkill in getsoftSkillsInfo()" :key="softSkill" id="cen">
+                <div class="card" style="background-color: #EAEFBD; border: none;  width: 200px; height: fit-content ">
+                    <div class="container">
+                        <img :src="softSkill.image" class="card-img animate__animated animate__tada" alt="skill img" style="margin-top: 20%;  ">
+                        <div class="hover-text">{{ softSkill.name }}</div>
+                        </div>
+                        </div>
+                        </div>
+</section>
+
+
+    </div>
     </div>
   </div>
 </template>
@@ -165,7 +89,13 @@ export default {
   },
   getEdu(){
     return this.$store.state.education
-  }
+  },
+  getskillsInfo(){
+            return this.$store.state.skills
+        },
+        getsoftSkillsInfo(){
+            return this.$store.state.softSkills
+        }
 
   }
 }
@@ -194,7 +124,7 @@ export default {
   padding: 20px;
 }
 
-img {
+#imgA {
   width: 100%;
   height: 450px;
   object-fit: cover;
@@ -203,13 +133,33 @@ img {
   filter: grayscale(100%);
   
 }
-.myTest img:hover {
+.myTest #imgA:hover {
   filter: none;
 }
 .myTest{
   background-color: #582707;
   border-radius: 200%;
   border: #582707 20px solid;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1; 
+  display: none;
+}
+
+.card:hover .hover-text {
+  display: block;
 }
 
 
@@ -375,8 +325,8 @@ img {
     height: auto;
     margin-top: 0;
   }
-  img {
-    height: auto;
+  #imgA {
+    height: 100%;
     width: 100%;
   }
   .myTest {
