@@ -34,7 +34,7 @@
     </div> -->
     <div>
         <img src="https://caitlin-dalwai.github.io/capstone-imgs/Group%202%20(3).png" alt="" style="width: 100vw; border: 8px solid black;">
-        <h3 style="margin-top: 2%; margin-bottom: 2%;">Click on button to view more</h3>
+        <h3 style="margin-top: 2%; margin-bottom: 2%;">Click to view more</h3>
         <button type="button" class="btn" id="modalBtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal" style="border:10px solid #697A21;margin-bottom: 1%; background-color: black; color: white;">
                         Education
@@ -89,6 +89,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button style="border:10px solid black; background-color: #697A21; color: white; margin-left: 2%; width: 6%; border-radius: 50%; margin-bottom: 1%; " class="btn"><router-link to="aws" style="color: white;">AWS</router-link></button>
     </div>
     <div>
         <img src="https://caitlin-dalwai.github.io/capstone-imgs/Group%203%20(2).png" alt="" style="width: 100vw; border: 8px solid black;">
