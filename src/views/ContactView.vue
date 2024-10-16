@@ -165,7 +165,7 @@ canvas {
   height: 100vh;
   z-index: -1; 
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 450px) {
     /* Adjust layout for small screen */
     .container {
       padding: 10px;

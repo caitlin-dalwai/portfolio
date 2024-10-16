@@ -1,7 +1,7 @@
 <template>
     <div id="fPage">
         <h1 style="font-weight:bolder; color:black; margin-top:1%; text-decoration: underline;">Projects</h1>
-        <h5>Hover over image to view more</h5>
+        <h5 id="mQh" >Hover over image to view more</h5>
         <h5 id="subT" style="display: none; font-size: medium;" class="animate__animated animate__bounceInLeft" >Click on image to see more</h5>
         <section class="d-flex justify-content-evenly flex-wrap">
             <div class="hehe" v-for="project in getProjInfo()" :key="project" id="cen">
@@ -13,7 +13,7 @@
 
                         <div class="card-img-overlay" id="text">
                             <h5 class="card-title" style="color: white; font-weight: bolder;">{{ project.name }}</h5>
-                            <p class="card-text" style="color: white;">{{ project.description }}</p>
+                            <p class="card-text" id="mQp" style="color: white;">{{ project.description }}</p>
                             <span id="spBtn"><a :href="project.github" class="btn btn-success" style="color: black;"
                                     target="_blank">GitHub</a> <a :href="project.vercel" class="btn btn-success"
                                     style="color: black;" target="_blank">Live</a></span>
@@ -48,6 +48,8 @@ body{
 
 }
 
+
+
 .container:hover #text {
     display: block;
 }
@@ -62,7 +64,7 @@ body{
     justify-content: center;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 450px) {
   #text {
     display: none; 
     background-color:  #582707de;
@@ -81,6 +83,14 @@ body{
 #subT{
     display: block !important;
 }
-
+.container{
+    margin-bottom: 50% !important;
+}
+#mQh{
+    display: none;
+}
+#mQp{
+    font-size: 10px !important;
+}
 }
 </style>

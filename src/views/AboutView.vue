@@ -309,7 +309,7 @@ export default {
         opacity: 0;
     }
 }
-@media (max-width: 300px) {
+@media (max-width: 450px) {
   .container-fluid {
     padding: 10px;
   }
